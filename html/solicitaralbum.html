@@ -62,7 +62,7 @@
 						<option value="album3">Album: Fotos de nubes</option>
 						<option value="album4">Album: Selfies</option>
 					</select>(*)<br>
-					<label for="tituloalbum">Título del album:</label><input type="text" name="tituloalbum" id="tituloalbum" maxlength="200" required>(*)<br>
+					<label for="tituloalbum">Título del album:</label><input type="text" name="tituloalbum" id="tituloalbum" maxlength="200" placeholder="Título del album" required>(*)<br>
 					<label for="textoadicional">Texto adicional:</label><textarea name="textoadicional" id="textoadicional" maxlength="4000" rows="4" cols="50" form="peticionalbum" placeholder="Introduzca texto adicional, por ejemplo, una dedicatoria o la descripción del album"></textarea><br>
 					<label for="colorportada">Color de la portada:</label><input type="color" name="colorportada" id="colorportada" value="black"><br>
 					<label for="cantidad">Cantidad:</label><input type="number" name="cantidad" id="cantidad" min="1" value="1" required><br>(*)
@@ -73,13 +73,13 @@
 				</fieldset>
 				<fieldset>
 					<legend>Datos de envio</legend>
-					<label for="nombre">Nombre completo:</label><input type="text" name="nombre" id="nombre" maxlength="200" required>(*)<br>
-					<label for="correo">Correo electrónico:</label><input type="email" name="correo" id="correo" maxlength="200" required>(*)<br>
-					<label for="direccion">Dirección de envio:</label><input type="text" name="direccion" id="direccion"><br>
-					<label for="direccion2">Dirección de envio 2:</label><input type="text" name="direccion2" id="direccion2"><br>
-					<label for="cp">Código Postal:</label><input type="number" name="cp" id="cp"><br>
-					<label for="localidad">Localidad:</label><input type="text" name="localidad" id="localidad"><br>
-					<label for="provincia">Provincia:</label><input type="text" name="provincia" id="provincia"><br>
+					<label for="nombre">Nombre completo:</label><input type="text" name="nombre" id="nombre" maxlength="200" placeholder="Tu nombre aquí" required>(*)<br>
+					<label for="correo">Correo electrónico:</label><input type="email" name="correo" id="correo" maxlength="200" placeholder="Tu correo aquí" required>(*)<br>
+					<label for="direccion">Dirección de envio:</label><input type="text" name="direccion" id="direccion" placeholder="Calle, oficina, partida, etc."><br>
+					<label for="direccion2">Dirección de envio 2:</label><input type="text" name="direccion2" id="direccion2" placeholder="Piso, escalera, puerta, etc."><br>
+					<label for="cp">Código Postal:</label><input type="number" name="cp" id="cp" placeholder="Código postal"><br>
+					<label for="localidad">Localidad:</label><input type="text" name="localidad" id="localidad" placeholder="Localidad"><br>
+					<label for="provincia">Provincia:</label><input type="text" name="provincia" id="provincia" placeholder="Provincia"><br>
 					<label for="pais">País:</label><select id="pais" name="pais" form="peticionalbum">
 						<option value="españa">España</option>
 						<option value="francia">Francia</option>
