@@ -6,7 +6,6 @@ header{
 
 body{
 	 font:Georgia, serif;
-<<<<<<< HEAD
 	 background-color:#E0E0E0;
 }
 #usuario{
@@ -28,13 +27,27 @@ body{
 	-webkit-transition-duration: 0.4s; 
 	transition-duration: 0.4s;
 }
-
 #entrar:hover {background-color: #e7e7e7;}
-=======
-	 
+#buscar{
+	font:Georgia, serif;
+	background-color: white;
+    color: black;
+	border-style: solid;
+	border-color:#555555;
+	-webkit-transition-duration: 0.4s; 
+	transition-duration: 0.4s;
 }
+#buscar:hover {background-color: #e7e7e7;}
 
->>>>>>> ee65bf32155dbf82450bfc1c256e5ebe0545de0e
+#titulo{
+	margin-left:5%;
+}
+#pais{
+	
+}
+#fecha{
+	
+}
 a:link {
     color: white;
 	text-decoration: none;
@@ -64,7 +77,6 @@ h2{
 	margin: auto;
 	text-align: center;
 }
-<<<<<<< HEAD
 footer{
 	font:Georgia, serif;
 	border:none;
@@ -76,9 +88,6 @@ footer{
     height: 10%;
     margin-top: 26.5%;
 }
-=======
-
->>>>>>> ee65bf32155dbf82450bfc1c256e5ebe0545de0e
 .navegacionheader{
 	display: inline-block; 
 }
