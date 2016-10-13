@@ -3,17 +3,18 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Página Principal - Pictures & Images</title>
+		<link rel="stylesheet" href="../css/index.css">
 	</head>
 	<body>
 		<header>
-			<a href="index.html"><img src="../resources/logo-PI.jpg" alt="Logo"></a>
+			<a href="index.html"><img class="logo" src="../resources/logo-PI.jpg" alt="Logo"></a>
 			<h1>Pictures & Images</h1>
-			<form action="indexidentificado.html">
+			<form action="indexidentificado.html" class="formidentificar">
 				<label for="usuario">Usuario:</label><input type="text" name="usuario" id="usuario">
 				<label for="contraseña">Contraseña:</label><input type="password" name="contraseña" id="contraseña">
-				<input type="submit" value="Entrar">
+				<input type="submit" value="Entrar" id="entrar">
 			</form>
-			<nav>
+			<nav class="navegacionheader">
 			<a href="registro.html">Registro</a>
 			| <a href="busqueda.html">Búsqueda</a>
 			</nav>

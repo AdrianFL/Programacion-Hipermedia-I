@@ -1,0 +1,83 @@
+header{
+	color: white;
+	background-color: black;	
+	width: 100%;
+}
+
+body{
+	 font:Georgia, serif;
+	 background-color:#E0E0E0;
+}
+#usuario{
+	border-style:solid;
+	border-width:20%;
+	border-color:black;
+}
+#contraseña{
+	border-style:solid;
+	border-width:20%;
+	border-color:black;
+}
+#entrar{
+	font:Georgia, serif;
+	background-color: white;
+    color: black;
+	border-style: solid;
+	border-color:#555555;
+	-webkit-transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+}
+
+#entrar:hover {background-color: #e7e7e7;}
+a:link {
+    color: white;
+	text-decoration: none;
+}
+
+a:visited {
+    color: white;
+	text-decoration: none;
+}
+
+a:hover {
+    color: red;
+	text-decoration: underline;
+}
+
+a:active {
+    color: red;
+	text-decoration: underline;
+}
+
+h1{
+	display: inline-block;  
+	margin-left: 25%
+}
+
+h2{
+	margin: auto;
+	text-align: center;
+}
+footer{
+	font:Georgia, serif;
+	border:none;
+	clear: both;
+    position: relative;
+	padding-top:0,5%;
+	background-color: black;
+    z-index: 10;
+    height: 10%;
+    margin-top: 26.5%;
+}
+.navegacionheader{
+	display: inline-block; 
+}
+
+.formidentificar{
+	display: inline-block;
+	margin-left: 3%
+}
+
+.logo{
+	display: inline-block; 
+}
