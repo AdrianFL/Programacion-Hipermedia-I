@@ -2,13 +2,36 @@ header{
 	color: white;
 	background-color: black;	
 	width: 100%;
+	height: 100px;
+	
+}
+
+header .leftheader{
+	display: inline-block;
+	width: 33%;
+}
+
+header .rightheader{
+	display: inline-block;
+	width: 33%;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 20px;
+}
+
+header .centerheader{
+	width: 33%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 10px;	
 }
 
 body{
 	 font:Georgia, serif;
-<<<<<<< HEAD
 	 background-color:#E0E0E0;
 }
+
 #usuario{
 	border-style:solid;
 	border-width:20%;
@@ -30,11 +53,8 @@ body{
 }
 
 #entrar:hover {background-color: #e7e7e7;}
-=======
 	 
-}
 
->>>>>>> ee65bf32155dbf82450bfc1c256e5ebe0545de0e
 a:link {
     color: white;
 	text-decoration: none;
@@ -55,16 +75,10 @@ a:active {
 	text-decoration: underline;
 }
 
-h1{
-	display: inline-block;  
-	margin-left: 25%
-}
-
 h2{
 	margin: auto;
 	text-align: center;
 }
-<<<<<<< HEAD
 footer{
 	font:Georgia, serif;
 	border:none;
@@ -76,9 +90,8 @@ footer{
     height: 10%;
     margin-top: 26.5%;
 }
-=======
 
->>>>>>> ee65bf32155dbf82450bfc1c256e5ebe0545de0e
+
 .navegacionheader{
 	display: inline-block; 
 }
@@ -90,4 +103,14 @@ footer{
 
 .logo{
 	display: inline-block; 
+}
+
+main a:link{
+	color:blue;
+	text-decoration: underline;
+}
+
+main a:visited{
+	color: black;
+	text-decoration: underline;
 }
