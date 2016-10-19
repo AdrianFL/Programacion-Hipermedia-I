@@ -3,21 +3,22 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>Búsqueda avanzada - Pictures & Images</title>
+	<link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-	<header>
-			<a href="index.html"><img src="../resources/logo-PI.jpg" alt="Logo"></a>
-			<h1>Pictures & Images</h1>
-			<form action="indexidentificado.html">
-				<label for="usuario">Usuario:</label><input type="text" name="usuario" id="usuario">
-				<label for="contraseña">Contraseña:</label><input type="password" name="contraseña" id="contraseña">
-				<input type="submit" value="Entrar">
+		<header>
+			<div class="leftheader"><a href="index.html"><img class="logo" src="../resources/logo-PI.jpg" alt="Logo"></a></div>
+			<h1 class="centerheader">Pictures & Images</h1>
+			<div class="rightheader"><form action="indexidentificado.html" class="formidentificar">
+				<label for="usuario">Usuario:</label><input type="text" name="usuario" id="usuario"><br>
+				<label for="contraseña">Contraseña:</label><input type="password" name="contraseña" id="contraseña"><br>
+				<input type="submit" value="Entrar" id="entrar">
 			</form>
-			<nav>
+			<nav class="navegacionheader">
 			<a href="registro.html">Registro</a>
 			| <a href="busqueda.html">Búsqueda</a>
-			</nav>
-	</header>
+			</nav></div>
+		</header>
 	<hr>
 	<main>
 		<h2>Búsqueda avanzada</h2>
@@ -25,7 +26,7 @@
 			<label for="titulo">Título:</label> <input type="text" name="titulo" id="titulo"><br>
 			<label for="pais">País:</label> <input type="text" name="pais" id="pais"><br>
 			<label for="fecha">Fecha:</label> <input type="date" name="fecha" id="fecha"><br>
-			<input type="submit" value="Buscar">
+			<input type="submit" value="Buscar" id="buscar">
 		</form>
 	</main>
 	<footer>
