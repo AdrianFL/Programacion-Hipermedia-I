@@ -19,6 +19,10 @@ header .rightheader{
 	padding-top: 20px;
 }
 
+header .formidentificar{
+	margin-right:  20px;
+}
+
 header .centerheader{
 	width: 33%;
 	display: inline-block;
