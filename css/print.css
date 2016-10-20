@@ -1,0 +1,182 @@
+header{
+	color: white;
+	background-color: black;	
+	width: 100%;
+	height: 100px;
+	
+}
+
+header .leftheader{
+	display: inline-block;
+	width: 33%;
+}
+
+header .rightheader{
+	display: inline-block;
+	width: 33%;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 20px;
+}
+
+header .formidentificar{
+	margin-right:  20px;
+}
+
+header .centerheader{
+	width: 33%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 10px;	
+}
+
+header .perfilheader{
+	margin-right: 150px;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+header nav{
+	display: inline-block;
+}
+
+body{
+	 font:Georgia, serif;
+	 background-color:#E0E0E0;
+}
+
+#usuario{
+	border-style:solid;
+	border-width:20%;
+	border-color:black;
+}
+#contraseña{
+	border-style:solid;
+	border-width:20%;
+	border-color:black;
+}
+#entrar{
+	font:Georgia, serif;
+	background-color: white;
+    color: black;
+	border-style: solid;
+	border-color:#555555;
+	-webkit-transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+}
+
+#entrar:hover {background-color: #e7e7e7;}
+	 
+
+a:link {
+    color: white;
+	text-decoration: none;
+}
+
+a:visited {
+    color: white;
+	text-decoration: none;
+}
+
+a:hover {
+    color: red;
+	text-decoration: underline;
+}
+
+a:active {
+    color: red;
+	text-decoration: underline;
+}
+
+h2{
+	margin: auto;
+	text-align: center;
+}
+footer{
+	font:Georgia, serif;
+	border:none;
+	clear: both;
+    position: relative;
+	padding-top:0,5%;
+	background-color: black;
+    z-index: 10;
+    height: 10%;
+	margin-top: 23.5%
+}
+
+
+.navegacionheader{
+	display: inline-block; 
+}
+
+.formidentificar{
+	display: inline-block;
+	margin-left: 3%
+}
+
+.logo{
+	display: inline-block; 
+}
+
+main a:link{
+	color:blue;
+	text-decoration: underline;
+}
+
+main a:visited{
+	color: black;
+	text-decoration: underline;
+}
+
+main form label{
+	display: block;
+	float: left;
+	width: 200px;
+	text-align: right;
+}
+
+main table, th, td{
+	border: 1px solid black;
+	width: 33%;
+}
+
+main table{
+	border-collapse: collapse;
+	margin-left: 2%;
+	float: left;
+}
+
+.introduccionalbum{
+	width: 40%;
+	margin-left: 30px;
+	display: inline-block;
+}
+
+.formbusqueda label{
+	display: block;
+	float: left;
+	width: 60px;
+}
+
+.titulotarifas{
+	margin-left: 16.8%;
+	margin-bottom: 5px;
+}
+
+.tituloformularioalbum{
+	margin-top: 100px;
+}
+
+.fotosindex{
+	text-align: center;
+}
+
+.fotosindex img{
+	max-height: 300px; 
+	min-height: 200px;
+	max-width: 300px;
+	min-width: 200px;
+	margin-left: 2px;
+	margin-right: 2px;
+	}
