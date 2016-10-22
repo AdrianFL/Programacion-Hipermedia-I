@@ -41,7 +41,9 @@ header nav{
 	display: inline-block;
 }
 
-body{
+html, body{
+	margin: 0px;
+	padding: 0px;
 	 font:Georgia, serif;
 	 background-color:#E0E0E0;
 }
@@ -94,15 +96,12 @@ h2{
 	text-align: center;
 }
 footer{
-	font:Georgia, serif;
-	border:none;
-	clear: both;
-    position: relative;
-	padding-top:0,5%;
+    position: fixed;
 	background-color: black;
     z-index: 10;
-    height: 10%;
-	margin-top: 23.5%
+    height: 3%;
+	bottom: 1px;
+	width: 100%;
 }
 
 
@@ -181,3 +180,10 @@ main table{
 	margin-right: 2px;
 	}
 
+footer nav{
+	margin-left: 10px;
+}
+
+main{
+	padding-top: 10px;
+}
