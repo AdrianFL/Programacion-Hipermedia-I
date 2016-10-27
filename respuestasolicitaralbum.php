@@ -20,72 +20,19 @@ require_once("includes/headeridentificado.inc.php");
 		echo "<tr><td>Resolución de las fotos</td><td>".$_POST["resolucionfotos"]."</td></tr>";
 		echo "<tr><td>Tipo de impresión</td><td>".$_POST["tipoimpresion"]."</td></tr>";
 		echo "<tr><td>Nombre completo</td><td>".$_POST["nombre"]."</td></tr>";
+		echo "<tr><td>Correo electrónico</td><td>".$_POST["correo"]."</td></tr>";
+		echo "<tr><td>Dirección de envio</td><td>".$_POST["direccion"]."</td></tr>";
+		echo "<tr><td>Dirección de envio 2</td><td>".$_POST["direccion2"]."</td></tr>";
+		echo "<tr><td>Código postal</td><td>".$_POST["cp"]."</td></tr>";
+		echo "<tr><td>Localidad</td><td>".$_POST["localidad"]."</td></tr>";
+		echo "<tr><td>Provincia</td><td>".$_POST["provincia"]."</td></tr>";
+		echo "<tr><td>Pais</td><td>".$_POST["pais"]."</td></tr>";
+		echo "<tr><td>Fecha de recepcion</td><td>".$_POST["fecharecepcion"]."</td></tr>";
+
+
+
 	}
-				?>
-				<tr>
-					<td>Albúm</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Titulo albúm</td>
-					<td>El madagascar iberico</td>
-				</tr>
-				<tr>
-					<td>Texto adicional</td>
-					<td>Para el gran Adrian Lewoski</td>
-				</tr>
-				<tr>
-					<td>Color de la portada</td>
-					<td>Rojo pasión</td>
-				</tr>
-				<tr>
-					<td>Cantidad</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>Resolución de las fotos</td>
-					<td>300</td>
-				</tr>
-				<tr>
-					<td>Tipo de impresión</td>
-					<td>A color</td>
-				</tr>
-				<tr>
-					<td>Nombre completo</td>
-					<td>Julian Adrian de la Rosa Martinez</td>
-				</tr>
-				<tr>
-					<td>Correo electronico</td>
-					<td>correosuperfalso1@gmail.com</td>
-				</tr>
-				<tr>
-					<td>Dirección de envío</td>
-					<td>Narnia,junto a la primera farola a la derecha</td>
-				</tr>
-				<tr>
-					<td>Codigo Postal</td>
-					<td>57894</td>
-				</tr>
-				<tr>
-					<td>Localidad</td>
-					<td>Ryleigh</td>
-				</tr>
-				<tr>
-					<td>Provincia</td>
-					<td>Oceano atlantico</td>
-				</tr>
-				<tr>
-					<td>Pais</td>
-					<td>Cthululandia</td>
-				</tr>
-				<tr>
-					<td>Fecha de la recepción</td>
-					<td>15/2/2017</td>
-				</tr>
-				<tr>
-					<td>Precio total</td>
-					<td>3,71€</td>
-				</tr>
+	?>
 			</table><br>
 			</main>
 <?php
