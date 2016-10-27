@@ -258,6 +258,11 @@ main .detfoto figure img{
 	height: 15%;
 }
 
+header .mensjerror{
+	display: inline-block;
+	color:red;
+}
+
 @media (max-width: 860px){
 	header .leftheader{
 		width:25%;
