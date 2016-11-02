@@ -1,0 +1,331 @@
+header{
+	color: white;
+	background-color: black;	
+	width: 100%;
+	height: 120px;
+	
+}
+
+header .leftheader{
+	display: inline-block;
+	width: 33%;
+}
+
+header .rightheader{
+	display: inline-block;
+	width: 33%;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 20px;
+}
+
+header .formidentificar{
+	margin-right:  20px;
+}
+
+header .centerheader{
+	width: 33%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 10px;	
+}
+
+header .perfilheader{
+	margin-right: 150px;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+header nav{
+	display: inline-block;
+}
+
+html, body{
+	margin: 0px;
+	padding: 0px;
+	 font:Georgia, serif;
+	 background-color:#E0E0E0;
+}
+
+html{
+	min-height: 100%;
+	position: relative;
+}
+
+body{
+	margin-bottom: 60px;
+}
+
+#usuario{
+	border-style:solid;
+	border-width:20%;
+	border-color:black;
+}
+#contraseña{
+	border-style:solid;
+	border-width:20%;
+	border-color:black;
+}
+#entrar{
+	font:Georgia, serif;
+	background-color: white;
+    color: black;
+	border-style: solid;
+	border-color:#555555;
+	-webkit-transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+}
+
+#entrar:hover {background-color: #e7e7e7;}
+	 
+
+a:link {
+    color: white;
+	text-decoration: none;
+}
+
+a:visited {
+    color: white;
+	text-decoration: none;
+}
+
+a:hover {
+    color: red;
+	text-decoration: underline;
+}
+
+a:active {
+    color: red;
+	text-decoration: underline;
+}
+
+h2{
+	margin: auto;
+	text-align: center;
+}
+footer{
+    position: absolute;
+	background-color: black;
+    z-index: 10;
+    height: 30px;
+	bottom: 0;
+	width: 100%;
+}
+
+
+.navegacionheader{
+	display: inline-block; 
+}
+
+.formidentificar{
+	display: inline-block;
+	margin-left: 3%
+}
+
+.logo{
+	display: inline-block; 
+}
+
+main a:link{
+	color:blue;
+	text-decoration: underline;
+}
+
+main a:visited{
+	color: black;
+	text-decoration: underline;
+}
+
+main form label{
+	display: block;
+	float: left;
+	width: 200px;
+	text-align: right;
+}
+
+main table, th, td{
+	border: 1px solid black;
+	width: 33%;
+}
+
+main table{
+	border-collapse: collapse;
+	margin-left: 2%;
+	float: left;
+}
+
+.introduccionalbum{
+	width: 40%;
+	margin-left: 30px;
+	display: inline-block;
+}
+
+.formbusqueda label{
+	display: block;
+	float: left;
+	width: 60px;
+}
+
+.titulotarifas{
+	margin-left: 16.8%;
+	margin-bottom: 5px;
+}
+
+.tituloformularioalbum{
+	margin-top: 100px;
+}
+
+.fotosindex{
+	text-align: center;
+}
+
+.fotosindex img{
+	max-height: 300px; 
+	min-height: 200px;
+	max-width: 300px;
+	min-width: 200px;
+	margin-left: 2px;
+	margin-right: 2px;
+	}
+
+footer nav{
+	margin-left: 10px;
+}
+
+main{
+	padding-top: 10px;
+}
+
+.perfilusuario{
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-left: 20px;
+	padding-right: 40px;
+}
+
+main .botonesperfil{
+	margin-left: 10px;
+}
+
+main .botonesperfil a:link{
+	background-color: #33adff;
+    color: white;
+    padding: 14px 25px;
+	margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+main .botonesperfil a:visited{
+	background-color: #33adff;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+main .botonesperfil a:hover{
+	background-color: blue;
+}
+
+main .botonesperfil a:active{
+	background-color: blue;
+}
+
+main .formbusqueda{
+	margin-left: 10px;
+}
+
+main .resultbusquedafinal{
+	margin-left: 10px;
+}
+
+main .resultbusqueda{
+	margin-left: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+main .detfoto{
+	margin-left: 10px;
+}
+
+main .detfoto figure img{
+	width: 15%;
+	height: 15%;
+}
+
+header .mensjerror{
+	display: inline-block;
+	color:red;
+}
+
+@media (max-width: 860px){
+	header .leftheader{
+		width:25%;
+	}
+	
+	.leftheader img{
+		max-width: 150px;
+	}
+	
+	header .rightheader{
+		width: 20%;
+	}
+	
+	header .centerheader{
+		font-size: 14px;
+		width:12%;
+	}
+	
+	footer{
+		font-size: 12px;
+	}
+	
+	.rightheader input{
+		max-width: 100px;
+	}
+	
+	.perfilheader img{
+		height: 20px;
+	}
+	
+	.centerheader{
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 620px){
+	.leftheader img{
+		max-width: 80px;
+		display: none;
+	}
+	
+	.leftheader{
+		width: 0px;
+	}
+	
+	.centerheader{
+		margin-top: 30px;
+		text-align: left;
+	}
+	
+	header{
+		height: 120px;
+	}
+	
+	.rightheader{
+		margin-left: 5px;
+	}
+	
+	main input{
+		max-width: 60px;
+	}
+	
+	main textarea{
+		max-width: 150px;
+	}
+}
