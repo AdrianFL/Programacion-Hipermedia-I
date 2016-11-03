@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if($_SESSION["Estado"]!="Autenticado"){
+	header("location:index.php");
+}
 $title="Solicitar album impreso - Pictures & Images";
 require_once("includes/head.inc.php");
 require_once("includes/headeridentificado.inc.php");
