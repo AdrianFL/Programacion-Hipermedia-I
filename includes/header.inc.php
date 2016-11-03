@@ -5,6 +5,7 @@
 			<div class="rightheader"><form action="" method="POST" class="formidentificar">
 				<label for="usuario">Usuario:</label><input type="text" name="usuario" id="usuario"><br>
 				<label for="contraseña">Contraseña:</label><input type="password" name="contraseña" id="contraseña"><br>
+				<label for="Recordarme">Recordarme</label><input type="checkbox" name="Recordarme" value="Recordarme" id="Recordarme">
 				<input type="submit" value="Entrar" id="entrar">
 			</form>
 			<?php 

@@ -3,7 +3,8 @@
 				$usuario=$_POST["usuario"];
 				$password=$_POST["contraseña"];
 				if(($usuario=="AdrianFL" && $password=="admin")||($usuario=="ManuelJG"&& $password=="admin")||($usuario=="Usuario1" && $password=="user")){
-					header("location: indexidentificado.php");
+					header("location: index.php");
+					$_SESSION["Estado"]="Autenticado";
 				}
 				else{
 					header("location: confregistro.php?error");
