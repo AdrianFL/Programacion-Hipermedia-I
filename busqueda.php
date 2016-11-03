@@ -1,9 +1,11 @@
 <?php 
+session_start();
 if(isset($_POST)&&isset($_POST["usuario"])){
 				$usuario=$_POST["usuario"];
 				$password=$_POST["contraseña"];
 				if(($usuario=="AdrianFL" && $password=="admin")||($usuario=="ManuelJG"&& $password=="admin")||($usuario=="Usuario1" && $password=="user")){
-					header("location:indexidentificado.php");
+					header("location:index.php");
+					$_SESSION["Estado"]="Autenticado";
 				}
 				else{
 					header("location: busqueda.php?error");
@@ -11,7 +13,12 @@ if(isset($_POST)&&isset($_POST["usuario"])){
 	}
 $title="Página de búsqueda - Pictures & Images";
 require_once("includes/head.inc.php");
-require_once("includes/header.inc.php");
+if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){
+	require_once("includes/headeridentificado.inc.php");
+}
+else{
+	require_once("includes/header.inc.php");
+}
 ?>
 	<main>
 		<h2>Búsqueda avanzada</h2>

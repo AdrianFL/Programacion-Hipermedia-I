@@ -1,17 +1,25 @@
 <?php 
+	session_start();
 	if(isset($_POST)&&isset($_POST["usuario"])){
 				$usuario=$_POST["usuario"];
 				$password=$_POST["contraseña"];
 				if(($usuario=="AdrianFL" && $password=="admin")||($usuario=="ManuelJG"&& $password=="admin")||($usuario=="Usuario1" && $password=="user")){
-					header("location:indexidentificado.php");
+					header("location:index.php");
+					$_SESSION["Estado"]="Autenticado";
 				}
 				else{
 					header("location:resultados.php?error");
 				}
 		}
+	
 $title="Resultados de búsqueda - Pictures & Images";
 require_once("includes/head.inc.php");
-require_once("includes/header.inc.php");
+if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){
+	require_once("includes/headeridentificado.inc.php");
+}
+else{
+	require_once("includes/header.inc.php");
+}
 ?>
 	<main>
 		<form action="" class="formbusqueda" method="POST">
@@ -22,7 +30,7 @@ require_once("includes/header.inc.php");
 		</form>
 		<article class="resultbusqueda">
 			<figure>
-			<a href="detallefoto.php?id=1"><img src="resources/foto3.jpg" alt="ResultadoFoto"></a>
+			<?php if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){ echo "<a href='detallefoto.php?id=1'>";} ?><img src="resources/foto3.jpg" alt="ResultadoFoto"><?php if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){ echo "</a>";} ?>
 			</figure>
 			Titulo: De vacaciones<br>
 			Autor: Manuel Juarez<br>
@@ -30,7 +38,7 @@ require_once("includes/header.inc.php");
 		</article>
 		<article class="resultbusqueda">
 			<figure>
-			<a href="detallefoto.php?id=2"><img src="resources/foto2.jpg" alt="ResultadoFoto"></a>
+			<?php if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){ echo "<a href='detallefoto.php?id=2'>";} ?><img src="resources/foto2.jpg" alt="ResultadoFoto"><?php if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){ echo "</a>";} ?>
 			</figure>
 			Titulo: De fiesta<br>
 			Autor: Cristobal Colon<br>
@@ -38,7 +46,7 @@ require_once("includes/header.inc.php");
 		</article>
 		<article class="resultbusquedafinal">
 			<figure>
-			<a href="detallefoto.php?id=3"><img src="resources/foto4.jpg" alt="ResultadoFoto"></a>
+			<?php if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){ echo "<a href='detallefoto.php?id=3'>";} ?><img src="resources/foto4.jpg" alt="ResultadoFoto"><?php if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){ echo "</a>";} ?>
 			</figure>
 			Titulo: Celebración navideña<br>
 			Autor: Alexei<br>
