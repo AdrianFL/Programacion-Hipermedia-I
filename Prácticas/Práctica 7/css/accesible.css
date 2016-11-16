@@ -2,7 +2,8 @@ header{
 	color: white;
 	background-color: black;	
 	width: 100%;
-	height: 120px;
+	height: 100px;
+	font-size: 1.4em;
 	
 }
 
@@ -29,6 +30,7 @@ header .centerheader{
 	text-align: center;
 	vertical-align: top;
 	padding-top: 10px;	
+	font-size: 2em;
 }
 
 header .perfilheader{
@@ -44,17 +46,9 @@ header nav{
 html, body{
 	margin: 0px;
 	padding: 0px;
-	 font:Georgia, serif;
-	 background-color:#E0E0E0;
-}
-
-html{
-	min-height: 100%;
-	position: relative;
-}
-
-body{
-	margin-bottom: 60px;
+	font:Georgia, serif;
+	font-size: 100%;
+	background-color:#E0E0E0;
 }
 
 #usuario{
@@ -82,12 +76,12 @@ body{
 
 a:link {
     color: white;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:visited {
     color: white;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -105,12 +99,13 @@ h2{
 	text-align: center;
 }
 footer{
-    position: absolute;
+    position: fixed;
 	background-color: black;
     z-index: 10;
-    height: 30px;
-	bottom: 0;
+    height: 3%;
+	bottom: 1px;
 	width: 100%;
+	font-size: 1.4em
 }
 
 
@@ -140,7 +135,7 @@ main a:visited{
 main form label{
 	display: block;
 	float: left;
-	width: 200px;
+	width: 400px;;
 	text-align: right;
 }
 
@@ -195,21 +190,11 @@ footer nav{
 
 main{
 	padding-top: 10px;
-}
-
-.perfilusuario{
-	margin-left: 10px;
-	padding-top: 5px;
-	padding-left: 20px;
-	padding-right: 40px;
-}
-
-main .botonesperfil{
-	margin-left: 10px;
+	font-size: 1.4em;
 }
 
 main .botonesperfil a:link{
-	background-color: #33adff;
+	background-color: black;
     color: white;
     padding: 14px 25px;
 	margin-bottom: 10px;
@@ -219,7 +204,7 @@ main .botonesperfil a:link{
 }
 
 main .botonesperfil a:visited{
-	background-color: #33adff;
+	background-color: black;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -228,108 +213,9 @@ main .botonesperfil a:visited{
 }
 
 main .botonesperfil a:hover{
-	background-color: blue;
+	background-color: black;
 }
 
 main .botonesperfil a:active{
-	background-color: blue;
-}
-
-main .formbusqueda{
-	margin-left: 10px;
-}
-
-main .resultbusquedafinal{
-	margin-left: 10px;
-}
-
-main .resultbusqueda{
-	margin-left: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid black;
-}
-
-main .detfoto{
-	margin-left: 10px;
-}
-
-main .detfoto figure img{
-	width: 15%;
-	height: 15%;
-}
-
-header .mensjerror{
-	display: inline-block;
-	color:red;
-}
-
-header .mensjsaludo{
-	display: inline-block;
-}
-
-@media (max-width: 860px){
-	header .leftheader{
-		width:25%;
-	}
-	
-	.leftheader img{
-		max-width: 150px;
-	}
-	
-	header .rightheader{
-		width: 20%;
-	}
-	
-	header .centerheader{
-		font-size: 14px;
-		width:12%;
-	}
-	
-	footer{
-		font-size: 12px;
-	}
-	
-	.rightheader input{
-		max-width: 100px;
-	}
-	
-	.perfilheader img{
-		height: 20px;
-	}
-	
-	.centerheader{
-		margin-top: 30px;
-	}
-}
-
-@media (max-width: 620px){
-	.leftheader img{
-		max-width: 80px;
-		display: none;
-	}
-	
-	.leftheader{
-		width: 0px;
-	}
-	
-	.centerheader{
-		margin-top: 30px;
-		text-align: left;
-	}
-	
-	header{
-		height: 120px;
-	}
-	
-	.rightheader{
-		margin-left: 5px;
-	}
-	
-	main input{
-		max-width: 60px;
-	}
-	
-	main textarea{
-		max-width: 150px;
-	}
+	background-color: black;
 }
