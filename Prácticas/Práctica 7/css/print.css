@@ -1,0 +1,81 @@
+footer{
+	display: none;
+}
+
+header .rightheader{
+	display: none;
+}
+
+header .centerheader{
+	margin-left: 50px;
+	margin-bottom: 40px;
+	padding-top:0px;
+}
+
+html, body{
+	font: 14pt Georgia, serif;
+	background-color: #FFFFFF;
+}
+
+.fotosindex{
+	text-align: center;
+}
+
+.fotosindex img{
+	max-height: 300px; 
+	min-height: 200px;
+	max-width: 300px;
+	min-width: 200px;
+	margin-left: 2px;
+	margin-right: 2px;
+	}
+
+h2{
+	text-align: center;
+}
+
+
+header .leftheader{
+	display: inline-block;
+	width: 33%;
+}
+
+
+header .centerheader{
+	width: 33%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 10px;	
+}
+
+main a:visited{
+	color: blue;
+	text-decoration: underline;
+}
+
+main form label{
+	display: block;
+	float: left;
+	width: 250px;
+	text-align: right;
+}
+
+header{
+	color: black;
+	background-color: white;
+}
+
+main .botonesperfil{
+	display: none;
+}
+
+main .detfoto a:link{
+	color: black;
+	text-decoration: none;
+}
+
+main .detfoto a:visited{
+	color: black;
+	text-decoration: none;
+}
