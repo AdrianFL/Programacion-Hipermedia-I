@@ -19,8 +19,9 @@ require_once("includes/headeridentificado.inc.php");
 			<div class="botonesperfil"><nav>
 			<a href="modificarperfil.php">Modificar perfil</a>
 			<a href="eliminarperfil.php">Eliminar perfil</a><br>
-			<a href="visualizaralbum.php">Visualizar albumes</a>
+			<a href="misalbumes.php">Mis albumes</a>
 			<a href="crearalbum.php">Crear album</a>
+			<a href="anyadirfoto.php">Añadir foto</a>
 			<a href="solicitaralbum.php">Solicitar album impreso</a>	
 			</nav></div>
 		</main>
