@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-11-2016 a las 05:28:21
+-- Tiempo de generación: 17-11-2016 a las 12:55:58
 -- Versión del servidor: 10.1.16-MariaDB
--- Versión de PHP: 5.6.24
+-- Versión de PHP: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -35,6 +35,13 @@ CREATE TABLE `albumes` (
   `Usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `albumes`
+--
+
+INSERT INTO `albumes` (`IdAlbum`, `Titulo`, `Descripcion`, `Fecha`, `Pais`, `Usuario`) VALUES
+(1, 'El gran Album', 'El mejor album de la historia', '2016-11-17 10:50:27', 2, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -57,12 +64,12 @@ CREATE TABLE `fotos` (
 --
 
 INSERT INTO `fotos` (`IdFoto`, `Titulo`, `Descripcion`, `Fecha`, `Pais`, `Album`, `Fichero`, `FRegistro`) VALUES
-(1, 'La venganza de los sith', 'Venganza de un muñeco anime de los siths que le quitaron su sombrilla.', '2016-11-01 09:24:12', 1, 0, 'resources/foto1.jpg', '2016-11-17 00:00:00'),
-(2, 'Amor stalinista', 'Torrida historia de amor narrada en "Tu al gulag y yo a California"', '1946-04-13 15:26:24', 3, 0, 'resources/foto2.jpg', '2016-11-17 01:03:23'),
-(3, 'Viva Cthulhu', 'Ia! Ia! Cthulhu Fthagn!', '1010-10-14 13:26:27', 4, 0, 'resources/foto3.jpg\r\n', '2016-11-17 01:03:09'),
-(4, 'Penelope sonriente', 'Penelope sonriendo por la felicidad de su corazón.', '2016-11-01 16:42:36', 6, 0, 'resources/foto4.jpg', '2016-11-17 00:00:25'),
-(5, 'Nuestro querido administrador', 'Nuestro querido y adorado administrador, diseñador de esta fabulosa página web.', '2016-11-02 12:21:27', 1, 0, 'resources/foto5.jpg', '2016-11-17 00:44:28'),
-(6, 'Rick y Morty', 'Rick y Morty sorprendidos', '2016-09-21 14:32:00', 1, 0, 'resources/foto6.jpg', '2016-11-17 00:55:35');
+(1, 'La venganza de los sith', 'Venganza de un muñeco anime de los siths que le quitaron su sombrilla.', '2016-11-01 09:24:12', 1, 1, 'resources/foto1.jpg', '2016-11-17 00:00:00'),
+(2, 'Amor stalinista', 'Torrida historia de amor narrada en "Tu al gulag y yo a California"', '1946-04-13 15:26:24', 3, 1, 'resources/foto2.jpg', '2016-11-17 01:03:23'),
+(3, 'Viva Cthulhu', 'Ia! Ia! Cthulhu Fthagn!', '1010-10-14 13:26:27', 4, 1, 'resources/foto3.jpg\r\n', '2016-11-17 01:03:09'),
+(4, 'Penelope sonriente', 'Penelope sonriendo por la felicidad de su corazón.', '2016-11-01 16:42:36', 6, 1, 'resources/foto4.jpg', '2016-11-17 00:00:25'),
+(5, 'Nuestro querido administrador', 'Nuestro querido y adorado administrador, diseñador de esta fabulosa página web.', '2016-11-02 12:21:27', 1, 1, 'resources/foto5.jpg', '2016-11-17 00:44:28'),
+(6, 'Rick y Morty', 'Rick y Morty sorprendidos', '2016-09-21 14:32:00', 1, 1, 'resources/foto6.jpg', '2016-11-17 00:55:35');
 
 -- --------------------------------------------------------
 
@@ -182,7 +189,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `albumes`
 --
 ALTER TABLE `albumes`
-  MODIFY `IdAlbum` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdAlbum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `fotos`
 --
