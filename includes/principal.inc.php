@@ -1,13 +1,28 @@
 		<?php 
 		require_once("includes/funciones.inc.php");
+		require_once("includes/conexionbd.inc.php");
+		$sentencia = "SELECT * FROM fotos ORDER BY FRegistro DESC LIMIT 5";
+		$fotos = mysqli_query($mysqli, $sentencia);
+		if(!$fotos || $mysqli->errno){
+			die("Error: No se pudo realizar la consulta".$mysqli->error);
+		}
+		
 		?>
-		<main>
+		<main>	
 			<h2>Últimas 5 fotos</h2>
 			<div class="fotosindex">
-			<?php if(comp_sesion()){ echo "<a href='detallefoto.php?id=1'>";} ?><img src="resources/foto1.jpg" alt="Foto"><?php if(comp_sesion()){ echo "</a>";} ?>
-			<?php if(comp_sesion()){ echo "<a href='detallefoto.php?id=2'>";} ?><img src="resources/foto2.jpg" alt="Foto"><?php if(comp_sesion()){ echo "</a>";} ?>
-			<?php if(comp_sesion()){ echo "<a href='detallefoto.php?id=3'>";} ?><img src="resources/foto3.jpg" alt="Foto"><?php if(comp_sesion()){ echo "</a>";} ?>
-			<?php if(comp_sesion()){ echo "<a href='detallefoto.php?id=4'>";} ?><img src="resources/foto4.jpg" alt="Foto"><?php if(comp_sesion()){ echo "</a>";} ?>
-			<?php if(comp_sesion()){ echo "<a href='detallefoto.php?id=5'>";} ?><img src="resources/foto5.jpg" alt="Foto"><?php if(comp_sesion()){ echo "</a>";} ?>
+			<?php
+				while($foto=$fotos->fetch_assoc()){
+					if(comp_sesion()){
+						echo "<a href='detallefoto.php?id=".$foto['IdFoto']."'>";
+					}
+					echo "<img src='".$foto['Fichero']."' alt='".$foto['Titulo']."'>";
+					if(comp_sesion()){
+						echo "</a>";
+					}
+				}
+				mysqli_free_result($fotos);
+				mysqli_close($mysqli);
+			?>
 			</div>
 		</main>

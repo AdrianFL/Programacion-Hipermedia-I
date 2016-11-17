@@ -15,20 +15,23 @@ $title="Página de búsqueda - Pictures & Images";
 require_once("includes/head.inc.php");
 if(isset($_SESSION["Estado"])&&$_SESSION["Estado"]=="Autenticado"){
 	require_once("includes/headeridentificado.inc.php");
+	require_once("includes/conexionbd.inc.php");
 }
 else{
 	require_once("includes/header.inc.php");
+	require_once("includes/conexionbd.inc.php");
 }
 ?>
 	<main>
 		<h2>Búsqueda avanzada</h2>
 		<form action="resultados.php" class="formbusqueda" method="POST">
 			<label for="titulo">Título:</label> <input type="text" name="titulo" id="titulo"><br>
-			<label for="pais">País:</label> <input type="text" name="pais" id="pais"><br>
+			<?php require_once("includes/desplegablepaises.inc.php"); ?>
 			<label for="fecha">Fecha:</label> <input type="date" name="fecha" id="fecha"><br>
 			<input type="submit" value="Buscar" id="buscar">
 		</form>
 	</main>
 <?php
+mysqli_close($mysqli);
 require_once("includes/footer.inc.php");
 ?>

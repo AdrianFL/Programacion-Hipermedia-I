@@ -13,6 +13,7 @@
 $title="Formulario de registro - Pictures & Images";
 require_once("includes/head.inc.php");
 require_once("includes/header.inc.php");
+require_once("includes/conexionbd.inc.php");
 ?>
 <main>
 		<h2>Formulario de registro</h2>
@@ -29,7 +30,7 @@ require_once("includes/header.inc.php");
 			<label for="hombre">Género:</label><br>
 			<input type="radio" name="genero" value="Hombre" id="hombre" checked> <label for="hombre">Hombre</label><br>
 			<input type="radio" name="genero" value="Mujer" id="mujer"> <label for="mujer">Mujer</label><br>
-			<label for="pais">País:</label> <input type="text" name="pais" id="pais"><br>
+			<?php require_once("includes/desplegablepaises.inc.php"); ?>
 			<label for="ciudad">Ciudad:</label> <input type="text" name="ciudad" id="ciudad"><br>
 			<label for="foto">Foto: </label><input type="file" name="foto" id="foto"><br><br>
 			<input type="submit" value="Completar registro"><br>
@@ -37,5 +38,6 @@ require_once("includes/header.inc.php");
 		</form>
 	</main>
 <?php
+mysqli_close($mysqli);
 require_once("includes/footer.inc.php");
 ?>
