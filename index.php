@@ -6,7 +6,9 @@
 	}
     if(isset($_GET["entrar"])){
 		$porciones = explode(":",$_COOKIE['usuario']);
-		if(($porciones[0]=="AdrianFL" && $porciones[1]=="admin")||($porciones[0]=="ManuelJG"&& $porciones[1]=="admin")||($porciones[0]=="Usuario1" && $porciones[1]=="user")){
+		require_once("includes/conexionbd.inc.php");
+		$sentencia="select * from usuarios where NomUsuario=".$porciones[0]." and Clave=".$porciones[1];
+		if(mysqli_query($mysqli, $sentencia)->mysqli_fetch_assoc()){
 			$_SESSION["Estado"]="Autenticado";
 			$date= isset($_COOKIE['date']);
 			$fecha=date("F j, Y, g:i a");

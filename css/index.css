@@ -267,6 +267,11 @@ header .mensjsaludo{
 	display: inline-block;
 }
 
+.resultbusqueda img{
+	max-width: 600px;
+	max-height: 300px;
+}
+
 @media (max-width: 860px){
 	header .leftheader{
 		width:25%;
