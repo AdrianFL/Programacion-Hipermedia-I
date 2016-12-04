@@ -1,6 +1,6 @@
 <?php 
 	if(!isset($_POST["nusuario"])){
-		header("location: index.php");
+		header("location: perfil.php");
 	}
 	if(isset($_POST)&&isset($_POST["usuario"])){
 				$usuario=$_POST["usuario"];
@@ -15,7 +15,7 @@
 		}
 $title="Confirmación de registro - Pictures & Images";
 require_once("includes/head.inc.php");
-require_once("includes/header.inc.php");
+require_once("includes/headeridentificado.inc.php");
 require_once("includes/conexionbd.inc.php");
 if(isset($_POST)&&isset($_POST["nusuario"])&&$_POST["nusuario"]!=""){
 	$regularnombre="/^([0-9]|[a-z]|[A-Z]){3,15}$/";
@@ -71,25 +71,16 @@ if(isset($_POST)&&isset($_POST["nusuario"])&&$_POST["nusuario"]!=""){
 		$resultado=mysqli_query($mysqli, $sentenciainsercion);
 	}
 	else if($nombreusuario==false||$passusuario==false||$correousuario==false||$sexousuario==false||$dateusuario==false){
-		header("location: registro.php");
+		header("location: modificarperfil.php");
 	}
 }
 ?>
-<main>
-	<h2>Confirmación de registro</h2>
-	<p>Su registro se ha realizado correctamente. Los datos introducidos en su perfil son los siguientes:</p><br>
-	<?php if(isset($_POST)){
-		echo "<p>Nombre de usuario: ".$_POST["nusuario"]."</p>";
-		echo "<p>Correo electrónico: ".$_POST["correo"]."</p>";
-		echo "<p>Nombre completo: ".$_POST["nreal"]."</p>";
-		echo "<p>Fecha de nacimiento: ".$_POST["fecha"]."</p>";
-		echo "<p>Genero: ".$_POST["genero"]."</p>";
-		echo "<p>País: ".$_POST["pais"]."</p>";
-		echo "<p>Ciudad: ".$_POST["ciudad"]."</p>";
-		echo "<p>Foto: ".$_POST["foto"]."</p>";
-	}
-	?>
-</main>
+	<main>
+    <h2>Perfil modificado correctamente</h2>
+	<div class="botonesperfil"><nav>
+		<a href="perfil.php">Volver al perfil</a>
+	</nav></div>
+	</main>
 <?php
 mysqli_close($mysqli);
 require_once("includes/footer.inc.php");
