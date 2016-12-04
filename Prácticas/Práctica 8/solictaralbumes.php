@@ -17,11 +17,11 @@ $fotos = mysqli_query($mysqli, $sentfoto);
 if(!$fotos || $mysqli->errno){
 	die("Error: No se pudo realizar la consulta".$mysqli->error);
 }
-
+$foto=$fotos->fetch_assoc();
 $albumes=$albumes->fetch_assoc();
 echo "<article class='visalbum'>Album: ".$albumes['Titulo']."<br>";
-while($fto = mysqli_fetch_array($fotos)){   
-echo "<figure><img src='".$fto['Fichero']."' alt='".$fto['Titulo']."'></figure>";  
+while($fto = mysqli_fetch_array($fotos)){   //Creates a loop to loop through results
+echo "<figure><img src='".$fto['Fichero']."' alt='".$fto['Titulo']."'></figure>";  //$row['index'] the index here is a field name
 echo "Titulo: ".$fto['Titulo']."<br>Fecha: ".$fto['Fecha']."<br>Album: ".$fto['Album']."<br>";
 }
 echo "</article>";

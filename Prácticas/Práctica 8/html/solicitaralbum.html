@@ -1,12 +1,25 @@
-<?php 
-session_start();
-require_once("includes/compsesion.inc.php");
-$title="Solicitar album impreso - Pictures & Images";
-require_once("includes/head.inc.php");
-require_once("includes/headeridentificado.inc.php");
-require_once("includes/conexionbd.inc.php");
-?>
-<main>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Solicitar Album - Pictures & Images</title>
+		<link rel="stylesheet" href="../css/index.css" media="screen">
+		<link rel="stylesheet" href="../css/print.css" media="print">
+		<link rel="alternate stylesheet" href="../css/accesible.css" media="screen" title="Modo Accesibilidad">
+	</head>
+	<body>
+		<header>
+			<div class="leftheader"><a href="index.html"><img src="../resources/logo-PI.jpg" alt="Logo"></a></div>
+			<h1 class="centerheader">Pictures & Images</h1>
+			<div class="rightheader"><div class="perfilheader"><a href="perfil.html">Usuario1</a>
+			<a href="perfil.html"><img src="../resources/avatar.jpg" alt="Avatar"></a></div>
+			<nav>
+			<a href="registro.html">Registro</a>
+			| <a href="busqueda.html">Búsqueda</a>
+			</nav></div>
+		</header>
+		<hr>
+		<main>
 			<h2>Solicitar album impreso</h2>
 			<h3 class="titulotarifas">Tarifas</h3>
 			<table>
@@ -40,7 +53,7 @@ require_once("includes/conexionbd.inc.php");
 				</tr>
 			</table><p class="introduccionalbum">Con esta herramienta usted puede solicitar la impresión y envío a domicilio de cualquiera de sus albumes de fotos. Entre las opciones que puede seleccionar para la personalización
 			de su album están la resolución de las fotografias a imprimir, el título y color de la portada del album, las copias y otras opciones como la fecha deseada de recepción.</p><br>
-			<form action="respuestasolicitaralbum.php" id="peticionalbum" method="POST">
+			<form action="respuestasolicitaralbum.html" id="peticionalbum">
 			<h3 class="tituloformularioalbum">Formulario de solicitud</h3>
 			<p>Rellene el siguiente formulario para realizar el pedido de su album. Los campos marcados con asterisco (*) son obligatorios.</p>
 				<fieldset>
@@ -69,12 +82,25 @@ require_once("includes/conexionbd.inc.php");
 					<label for="cp">Código Postal:</label><input type="number" name="cp" id="cp" placeholder="Código postal"><br>
 					<label for="localidad">Localidad:</label><input type="text" name="localidad" id="localidad" placeholder="Localidad"><br>
 					<label for="provincia">Provincia:</label><input type="text" name="provincia" id="provincia" placeholder="Provincia"><br>
-					<?php require_once("includes/desplegablepaises.inc.php"); ?>
+					<label for="pais">País:</label><select id="pais" name="pais">
+						<option value="españa">España</option>
+						<option value="francia">Francia</option>
+						<option value="alemania">Alemania</option>
+						<option value="reinounido">Reino Unido</option>
+						<option value="portugal">Portugal</option>
+					</select><br>
 					<label for="fecharecepcion">Fecha deseada de recepción:</label><input type="date" name="fecharecepcion" id="fecharecepcion">
 				</fieldset>
 				<input type="submit" name="Enviar" id="enviar"><br>
 			</form>
 		</main>
-<?php
-require_once("includes/footer.inc.php");
-?>
+		<footer>
+		<nav>
+			<a href="contacto.html">Contacto</a>
+			| <a href="ayuda.html">Ayuda</a>
+			| <a href="privacidad.html">Política de privacidad</a>
+			| <a href="cookies.html">Política de cookies</a>
+		</nav>
+		</footer>
+	</body>
+</html>
