@@ -12,6 +12,7 @@
 		if($user=$usuarios->fetch_assoc()){
 			$_SESSION["Estado"]="Autenticado";
 			$_SESSION["UserID"]=$user["IdUsuario"];
+			$_SESSION["UserName"]=$user["NomUsuario"];
 			$date= isset($_COOKIE['date']);
 			$fecha=date("F j, Y, g:i a");
 			setcookie('date',$fecha,time() +60*60*7);
@@ -37,6 +38,7 @@
 				if($user=$usuarios->fetch_assoc()){
 					$_SESSION["Estado"]="Autenticado";
 					$_SESSION["UserID"]=$user["IdUsuario"];
+					$_SESSION["UserName"]=$user["NomUsuario"];
 					if(isset($_POST['Recordarme'])){
                         $date= isset($_COOKIE['date']);
                         $fecha=date("F j, Y, g:i a");
