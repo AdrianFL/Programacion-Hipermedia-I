@@ -81,7 +81,6 @@ if(isset($_POST)&&isset($_POST["nusuario"])&&$_POST["nusuario"]!=""){
 	<?php if(isset($_POST)){
 		echo "<p>Nombre de usuario: ".$_POST["nusuario"]."</p>";
 		echo "<p>Correo electrónico: ".$_POST["correo"]."</p>";
-		echo "<p>Nombre completo: ".$_POST["nreal"]."</p>";
 		echo "<p>Fecha de nacimiento: ".$_POST["fecha"]."</p>";
 		echo "<p>Genero: ".$_POST["genero"]."</p>";
 		echo "<p>País: ".$_POST["pais"]."</p>";

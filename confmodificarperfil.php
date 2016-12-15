@@ -1,19 +1,10 @@
 <?php 
+	session_start();
+	require_once("includes/compsesion.inc.php");
 	if(!isset($_POST["nusuario"])){
 		header("location: perfil.php");
 	}
-	if(isset($_POST)&&isset($_POST["usuario"])){
-				$usuario=$_POST["usuario"];
-				$password=$_POST["contraseña"];
-				if(($usuario=="AdrianFL" && $password=="admin")||($usuario=="ManuelJG"&& $password=="admin")||($usuario=="Usuario1" && $password=="user")){
-					header("location: index.php");
-					$_SESSION["Estado"]="Autenticado";
-				}
-				else{
-					header("location: confregistro.php?error");
-				}
-		}
-$title="Confirmación de registro - Pictures & Images";
+$title="Perfil modificado - Pictures & Images";
 require_once("includes/head.inc.php");
 require_once("includes/headeridentificado.inc.php");
 require_once("includes/conexionbd.inc.php");
@@ -27,46 +18,40 @@ if(isset($_POST)&&isset($_POST["nusuario"])&&$_POST["nusuario"]!=""){
 	$dateusuario=false;
 	if(preg_match($regularnombre, $_POST["nusuario"])){
 		$nombreusuario=true;
-		$sentenciainsercion="INSERT INTO usuarios (NomUsuario, Clave, Email, Sexo, FNacimiento, Ciudad, Pais, Foto, FRegistro) values ('".$_POST["nusuario"]."'";
+		$sentenciainsercion="UPDATE usuarios SET NomUsuario='".$_POST["nusuario"]."'";
 	}
 	if(isset($_POST["pass"])&&isset($_POST["confpass"])&&$_POST["pass"]!=""&&preg_match($regularpass, $_POST["pass"])&&strcmp($_POST["pass"],$_POST["confpass"])==0){
 		$passusuario=true;
-		$sentenciainsercion=$sentenciainsercion.",'".$_POST["pass"]."'";
+		$sentenciainsercion=$sentenciainsercion.", Clave='".$_POST["pass"]."'";
 	}
 	if(isset($_POST["correo"])&&$_POST["correo"]!=""&&filter_var($_POST["correo"], FILTER_VALIDATE_EMAIL)&&strcmp($_POST["correo"], $_POST["confcorreo"])==0){
 		$correousuario=true;
-		$sentenciainsercion=$sentenciainsercion.",'".$_POST["correo"]."'";
+		$sentenciainsercion=$sentenciainsercion.", Email='".$_POST["correo"]."'";
 	}
 	if(isset($_POST["genero"])&&$_POST["genero"]!=""){
 		if($_POST["genero"]=="Hombre"){
 			$sexousuario=true;
-			$sentenciainsercion=$sentenciainsercion.", 1";
+			$sentenciainsercion=$sentenciainsercion.", Sexo=1";
 		}
 		else if($_POST["genero"]=="Mujer"){
 			$sexousuario=true;
-			$sentenciainsercion=$sentenciainsercion.", 2";
+			$sentenciainsercion=$sentenciainsercion.", Sexo=2";
 		}
 	}
 	if(isset($_POST["fecha"])){
 		$dateusuario=true;
-		$sentenciainsercion=$sentenciainsercion.",'".$_POST["fecha"]."'";
+		$sentenciainsercion=$sentenciainsercion.", FNacimiento='".$_POST["fecha"]."'";
 	}
 	if(isset($_POST["ciudad"])&&$_POST["ciudad"]!=""){
-		$sentenciainsercion=$sentenciainsercion.",'".$_POST["ciudad"]."'";
-	}
-	else{
-		$sentenciainsercion=$sentenciainsercion.",''";
+		$sentenciainsercion=$sentenciainsercion.", Ciudad='".$_POST["ciudad"]."'";
 	}
 	if(isset($_POST["pais"])){
-		$sentenciainsercion=$sentenciainsercion.",".$_POST["pais"];
+		$sentenciainsercion=$sentenciainsercion.", Pais=".$_POST["pais"];
 	}
 	if(isset($_POST["foto"])){
-		$sentenciainsercion=$sentenciainsercion.", ''"; //No almacenamos la foto de momento
+		$sentenciainsercion=$sentenciainsercion.", Foto='resources/avatar.jpg'"; //No almacenamos la foto de momento
 	}
-	else{
-		$sentenciainsercion=$sentenciainsercion.", ''";
-	}
-	$sentenciainsercion=$sentenciainsercion.", UTC_TIMESTAMP);";
+	$sentenciainsercion=$sentenciainsercion." where IdUsuario=".$_SESSION["UserID"].";";
 	if($nombreusuario==true&&$passusuario==true&&$correousuario==true&&$sexousuario==true&&$dateusuario==true){
 		$resultado=mysqli_query($mysqli, $sentenciainsercion);
 	}
