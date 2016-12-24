@@ -51,6 +51,7 @@ if(isset($_POST)&&isset($_POST["nusuario"])&&$_POST["nusuario"]!=""){
 	if(isset($_POST["pais"])){
 		$sentenciainsercion=$sentenciainsercion.", Pais=".$_POST["pais"];
 	}
+<<<<<<< HEAD
 	if(isset($_FILES["foto"])){
 		if(file_exists($album["Foto"])){
 			unlink($album["Foto"]);
@@ -64,6 +65,10 @@ if(isset($_POST)&&isset($_POST["nusuario"])&&$_POST["nusuario"]!=""){
 	}
 	else{
 		$sentenciainsercion=$sentenciainsercion.", ''";
+=======
+	if(isset($_POST["foto"])){
+		$sentenciainsercion=$sentenciainsercion.", Foto='resources/avatar.jpg'"; //No almacenamos la foto de momento
+>>>>>>> origin/Adrian
 	}
 	$sentenciainsercion=$sentenciainsercion." where IdUsuario=".$_SESSION["UserID"].";";
 	if($nombreusuario==true&&$passusuario==true&&$correousuario==true&&$sexousuario==true&&$dateusuario==true){
